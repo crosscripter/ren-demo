@@ -4,7 +4,7 @@ import './styles.css'
 const { REACT_APP_MAPS_URL } = process.env
 const range = (from, to) => Array.from({ length: (to - from) + 1 }).map((_, i) => i + from)
 
-const PaginatedTable = ({ items, page, pages, perPage, pagesShown, onPageChange }) => {
+const PaginatedTable = ({ items, page, pages, pagesShown, onPageChange }) => {
 
     const [startPage, setStartPage] = useState(1)
     const [endPage, setEndPage] = useState(pagesShown)
@@ -33,9 +33,11 @@ const PaginatedTable = ({ items, page, pages, perPage, pagesShown, onPageChange 
         }
     }
 
+    const hasResults = items?.length > 0
+
     return (
         <>
-            <table className='Search-results'>
+            { hasResults ? <table className='Search-results'>
                 <thead>
                     <tr>
                         <th style={{ width: 170 }}>EIN</th>
@@ -65,12 +67,12 @@ const PaginatedTable = ({ items, page, pages, perPage, pagesShown, onPageChange 
                         )
                     })}
                 </tbody>
-            </table>
-            <ul className='Search-results--pagination'>
+            </table> : <h3 className='Search-results--no-results'>No results found</h3> }
+            { hasResults && <ul className='Search-results--pagination'>
                 <li className={page < 2 ? 'disabled' : ''} onClick={prevPages}>Prev</li>
                 {pageRange.map(i => <li key={`page${i}`}> <a href='#' className={i === page ? 'current' : ''} onClick={() => onPageChange(i)}>{i}</a> </li>)}
                 <li className={page >= pages ? 'disabled' : ''} onClick={nextPages}>Next</li>
-            </ul>
+            </ul> }
         </>
     )
 }

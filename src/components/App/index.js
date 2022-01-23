@@ -1,5 +1,5 @@
-import './styles.css';
 import Search from '../Search'
+import './styles.css';
 
 const App = () => {
   return (

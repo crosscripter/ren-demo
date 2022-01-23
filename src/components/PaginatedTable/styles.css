@@ -9,6 +9,8 @@
 
 .Search-results th {
     background: var(--light-gray);
+    text-align: left;
+    padding-left: 10px;
     color: var(--pink);
     height: 40px;
     border-bottom: 2px solid var(--med-gray);
@@ -37,23 +39,16 @@
     border: none;
 }
 
-.Search-results button {
-    padding: 15px 30px;
-    color: white;
-    font-weight: bold;
-    vertical-align: middle;
-    border-radius: 5px;
-    border: 2px solid var(--pink);
-    background: linear-gradient(pink 50%, hotpink 55%);
-}
-
-.Search-results button:hover {
-    background: linear-gradient(hotpink 50%, lightPink 55%);
+.Search-results--no-results {
+    text-align: center;
+    color: var(--med-gray);
 }
 
 .Search-results--pagination {
     position: relative;
     padding-top: 10px;
+    margin-right: 20px;
+    float:right;
     list-style: none;
     user-select: none;
     font-size: 1.1rem;
@@ -125,5 +120,19 @@
         width: 45%; 
         padding-right: 10px; 
         white-space: nowrap;
+    }
+
+    .Search-results--pagination {
+        display: block;
+        position: sticky;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: var(--offwhite);
+        margin:0;
+        text-align: center;
+        padding: 20px;
+        width: 100%;
+        font-size: 1rem;
     }
 }

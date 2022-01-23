@@ -23,10 +23,8 @@ const Search = () => {
         log(`charities`, charities, page, '/', pages, '(', num_charities, ' total)')
     }
 
-    useEffect(() => {
-        searchBox.current.focus()
-    })
     useEffect(fetchCharities, [search, page])
+    useEffect(() => searchBox.current.focus(), [])
 
     return (
         <>
@@ -44,7 +42,6 @@ const Search = () => {
             <PaginatedTable 
                 items={charities} 
                 pages={pages} 
-                perPage={perPage} 
                 page={page} 
                 pagesShown={10} 
                 onPageChange={setPage} />

@@ -20,7 +20,6 @@ const router = Router()
 // should default to 1 if not provided.
 router.get('/', async ({ query: { name, fields=DEFAULT_FIELDS, page=1, results=20 }}, res) => {
     log('GET /search', fields, page, results)
-    // TODO: Is name required shown in the screenshot?
     const query = `name=${name}&fields=${fields}&page=${page}&results=${results}`
     const { data } = await axios.get(`${API_URL}/search?${query}`, { headers: { 'X-API-KEY': API_KEY } })
     log('Search results', data)
