@@ -1,0 +1,19 @@
+header {
+  padding: 0px 30px;
+  font-size: 110%;
+  padding-top: 10px;
+  margin-bottom: 0;
+  background: var(--gray-gradient);
+  border-bottom: 0;
+}
+header h2 {
+  margin: 0;
+  font-size: 72px;
+  background: var(--pink-gradient);
+  background-clip: text;
+  -webkit-text-fill-color: transparent; 
+}
+header h3 {
+  margin-bottom: 0;
+  color: var(--dark-gray);
+}

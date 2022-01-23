@@ -1,0 +1,14 @@
+:root {
+    --offwhite: #fefefe;
+    --lightest-gray: #f0f0f0;
+    --light-gray: #eee;
+    --med-gray: #ddd;
+    --dark-gray: #555;
+    --darkest-gray: #333;
+
+    --pink: paleVioletRed;
+    --light-pink: pink;
+    --pink-gradient: linear-gradient(var(--pink) 52%, rgb(90, 11, 40) 44%); 
+    --gray-gradient: linear-gradient(var(--med-gray), var(--lightest-gray), var(--offwhite));
+    --shadow: 1px 1px 3px rgba(0, 0, 0, 0.75);
+}
