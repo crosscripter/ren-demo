@@ -1,0 +1,24 @@
+form {
+  padding: 30px;
+  background: var(--offwhite);
+  border: 1px solid var(--med-gray);
+  border-top: 0;
+}
+label { 
+  color: var(--dark-gray);
+  font-weight: bold;
+  margin-right: 10px;
+}
+input {
+  height: 36px;
+  padding: 20px 10px;
+  font-size: 1rem;
+  width: 280px;
+  color: var(--darkest-gray);
+  background: var(--offwhite);
+  border-radius: 3px;
+  border: 2px solid var(--med-gray);
+}
+input:focus {
+  outline: 1px solid var(--pink);
+}
