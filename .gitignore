@@ -11,6 +11,10 @@ node_modules
 # production
 /build
 
+# env
+.env
+api/.env
+
 # misc
 .DS_Store
 .env
